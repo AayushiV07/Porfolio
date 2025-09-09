@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aayushi Verma — Portfolio</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Favicons / meta (add your images later) -->
+  <meta name="description" content="Aayushi Verma — Frontend Developer. Projects, skills and contact." />
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <header class="header" id="header">
+    <a href="#home" class="logo animate__animated animate__fadeInLeft">Aayushi<span class="dot">.</span></a>
+
+    <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+      <i class='bx bx-menu'></i>
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"><i class='bx bx-moon'></i></button>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="section hero">
+    <div class="hero-left animate__animated animate__fadeInLeft">
+      <h1>Hi, I'm <span class="name">Aayushi Verma</span></h1>
+      <h2 class="role"><span id="typed"></span></h2>
+      <p class="lead">
+        I build delightful and accessible frontends. Currently pursuing B.Tech (IT) at Bhagwan Parshuram Institute of Technology.
+        I love working on web UI, DSA with Java, and exploring AR/VR ideas.
+      </p>
+
+      <div class="hero-ctas">
+        <button id="open-resume" class="btn animate-pulse">View Resume</button>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/aayushi-verma-32997a198/" target="_blank" aria-label="LinkedIn" class="social-link"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://twitter.com/Aayushi_V07" target="_blank" aria-label="Twitter" class="social-link"><i class='bx bxl-twitter'></i></a>
+        <a href="https://github.com/AayushiV07" target="_blank" aria-label="Github" class="social-link"><i class='bx bxl-github'></i></a>
+      </div>
+    </div>
+
+    <div class="hero-right animate__animated animate__fadeInRight">
+      <div class="profile-card floating" id="profile-card" aria-hidden="false">
+        <div class="profile-image-placeholder">
+          <i class='bx bx-user'></i>
+          <p>Add your photo here</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>Frontend Developer & DSA enthusiast</h3>
+        <p>
+          I'm a passionate frontend developer learning and building projects using React, vanilla JS, HTML & CSS.
+          I enjoy solving problems with Java and experimenting with AR/VR for engaging user experiences.
+        </p>
+        <ul class="quick-list">
+          <li><i class='bx bx-map'></i> Delhi, India</li>
+          <li><i class='bx bx-graduation'></i> B.Tech (IT) — Bhagwan Parshuram Institute of Technology</li>
+          <li><i class='bx bx-code-alt'></i> Interests: Web UI, AR/VR, DSA</li>
+        </ul>
+        <a class="btn btn-inline" href="#projects">See Projects</a>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat animate-on-scroll">
+          <h4 class="counter" data-count="8.2">0</h4>
+          <p>CGPA</p>
+        </div>
+        <div class="stat animate-on-scroll">
+          <h4 class="counter" data-count="10">0</h4>
+          <p>Projects</p>
+        </div>
+        <div class="stat animate-on-scroll">
+          <h4 class="counter" data-count="3">0</h4>
+          <p>Internships / Workshops</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section education">
+    <h2 class="section-title">My <span>Journey</span></h2>
+    <div class="timeline">
+      <article class="timeline-item animate-on-scroll">
+        <div class="timeline-marker"></div>
+        <time>2018 - 2019</time>
+        <h3>Senior Secondary Education</h3>
+        <p>Central Railway Sr Sec School Bhusawal — 89%</p>
+      </article>
+
+      <article class="timeline-item animate-on-scroll">
+        <div class="timeline-marker"></div>
+        <time>2020 - 2021</time>
+        <h3>Higher Senior Secondary</h3>
+        <p>Central Railway Sr Sec School Bhusawal — 82.6%</p>
+      </article>
+
+      <article class="timeline-item animate-on-scroll">
+        <div class="timeline-marker"></div>
+        <time>2022 - Present</time>
+        <h3>B.Tech — Information Technology</h3>
+        <p>Bhagwan Parshuram Institute of Technology — CGPA 8.053</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="vr">AR/VR</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+      <!-- project cards -->
+      <article class="project-card animate-on-scroll" data-type="web">
+        <div class="project-image-placeholder">
+          <i class='bx bx-world'></i>
+          <p>Fire Safety Frontend</p>
+        </div>
+        <div class="project-info">
+          <h3>Fire Safety Frontend</h3>
+          <p>Responsive UI tackling fire incident reporting and management.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-actions">
+            <button class="view-btn">Preview</button>
+            <a href="#" class="live-link">Live</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card animate-on-scroll" data-type="vr">
+        <div class="project-image-placeholder">
+          <i class='bx bx-cube'></i>
+          <p>AR Tourist Guide</p>
+        </div>
+        <div class="project-info">
+          <h3>AR Tourist Guide</h3>
+          <p>Augmented reality features to guide tourists and integrate maps.</p>
+          <div class="project-tags">
+            <span class="tag">Unity</span>
+            <span class="tag">AR Core</span>
+            <span class="tag">C#</span>
+          </div>
+          <div class="project-actions">
+            <button class="view-btn">Preview</button>
+            <a href="#" class="live-link">Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card animate-on-scroll" data-type="design">
+        <div class="project-image-placeholder">
+          <i class='bx bxl-youtube'></i>
+          <p>YouTube UI Clone</p>
+        </div>
+        <div class="project-info">
+          <h3>YouTube UI Clone</h3>
+          <p>Pixel-perfect HTML/CSS recreation of the YouTube layout.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsive</span>
+          </div>
+          <div class="project-actions">
+            <button class="view-btn">Preview</button>
+            <a href="#" class="live-link">Demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills-grid">
+      <div class="skill-card animate-on-scroll">
+        <div class="skill-icon">
+          <i class='bx bxl-html5'></i>
+        </div>
+        <h4>HTML</h4>
+        <div class="progress" data-value="90"><span style="width:0%"></span></div>
+        <span class="skill-percentage">90%</span>
+      </div>
+      <div class="skill-card animate-on-scroll">
+        <div class="skill-icon">
+          <i class='bx bxl-css3'></i>
+        </div>
+        <h4>CSS</h4>
+        <div class="progress" data-value="80"><span style="width:0%"></span></div>
+        <span class="skill-percentage">80%</span>
+      </div>
+      <div class="skill-card animate-on-scroll">
+        <div class="skill-icon">
+          <i class='bx bxl-javascript'></i>
+        </div>
+        <h4>JavaScript</h4>
+        <div class="progress" data-value="70"><span style="width:0%"></span></div>
+        <span class="skill-percentage">70%</span>
+      </div>
+      <div class="skill-card animate-on-scroll">
+        <div class="skill-icon">
+          <i class='bx bxl-java'></i>
+        </div>
+        <h4>Java (DSA)</h4>
+        <div class="progress" data-value="65"><span style="width:0%"></span></div>
+        <span class="skill-percentage">65%</span>
+      </div>
+      <div class="skill-card animate-on-scroll">
+        <div class="skill-icon">
+          <i class='bx bxl-react'></i>
+        </div>
+        <h4>React</h4>
+        <div class="progress" data-value="60"><span style="width:0%"></span></div>
+        <span class="skill-percentage">60%</span>
+      </div>
+      <div class="skill-card animate-on-scroll">
+        <div class="skill-icon">
+          <i class='bx bx-palette'></i>
+        </div>
+        <h4>Web Design</h4>
+        <div class="progress" data-value="70"><span style="width:0%"></span></div>
+        <span class="skill-percentage">70%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    
+    <div class="contact-wrapper">
+      <div class="contact-info animate-on-scroll">
+        <h3>Get In Touch</h3>
+        <p>I'd love to hear from you! Whether you have a project in mind or just want to connect.</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class='bx bx-envelope'></i>
+            <span>kusum2006verma@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class='bx bx-map'></i>
+            <span>Delhi, India</span>
+          </div>
+          <div class="contact-item">
+            <i class='bx bx-phone'></i>
+            <span>Available on request</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form animate-on-scroll" novalidate>
+        <div class="form-row">
+          <label>
+            <span>Full Name *</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email *</span>
+            <input type="email" name="email" required />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" pattern="[0-9]{10}" />
+          </label>
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" />
+          </label>
+        </div>
+
+        <label>
+          <span>Message *</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn" id="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <i class='bx bx-send loading-icon' style="display: none;"></i>
+          </button>
+        </div>
+
+        <div id="form-success" class="form-message success" role="status" aria-live="polite" hidden>
+          <i class='bx bx-check-circle'></i>
+          Thanks! Your message was sent successfully.
+        </div>
+        
+        <div id="form-error" class="form-message error" role="status" aria-live="polite" hidden>
+          <i class='bx bx-error-circle'></i>
+          Sorry, there was an error sending your message. Please try again.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <p>© <span id="year"></span> Aayushi Verma — Built with ❤️</p>
+    </div>
+    <div class="footer-right">
+      <a href="#home" class="back-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div id="resume-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+      <button class="modal-close" id="close-resume" aria-label="Close resume">✕</button>
+      <h3 id="resume-title">Resume — Aayushi Verma</h3>
+      <p>Download the PDF or preview it here.</p>
+      <div class="modal-actions">
+        <a href="/files/Aayushi_Resume.pdf" download class="btn">Download Resume</a>
+        <a href="#" class="btn btn-outline" id="resume-preview">Preview</a>
+      </div>
+      <!-- Optional embed preview -->
+      <div class="resume-preview" id="resume-preview-frame" hidden>
+        <iframe src="/files/Aayushi_Resume.pdf" title="Resume preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox for project preview -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="close-lightbox" aria-label="Close preview">✕</button>
+      <img id="lightbox-img" src="" alt="Project preview" />
+      <div id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Script -->
+  <script src="/js/script.js" defer></script>
+</body>
+</html>
